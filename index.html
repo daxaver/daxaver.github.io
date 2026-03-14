@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pieśni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #f0f0f0;
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 24px;
+    }
+    p {
+      margin: 0 0 4px 0;
+      color: #cccccc;
+    }
+    .separator {
+      border: none;
+      border-top: 1px solid #333;
+      margin: 48px auto;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div id="tresc">Ładowanie...</div>
+
+  <script>
+    function nazwaPliku(nazwa) {
+      return nazwa;
+    }
+
+    function parsujPlik(tekst) {
+      const linie = tekst.split("\n");
+      let html = "";
+      for (const linia of linie) {
+        if (linia.startsWith("[") && linia.includes("]")) {
+          html += `<br>`;
+        } else if (linia.trim() === "") {
+          html += "";
+        } else {
+          html += `<p>${linia}</p>`;
+        }
+      }
+      return html;
+    }
+
+    fetch("wybor.txt")
+      .then(r => r.text())
+      .then(lista => {
+        const pliki = lista.split("\n").map(l => l.trim()).filter(l => l);
+        return Promise.all(pliki.map(nazwa =>
+          fetch("piosenki/" + nazwa + ".txt").then(r => r.text()).then(tekst => ({ nazwa, tekst }))
+        ));
+      })
+      .then(wyniki => {
+        const html = wyniki
+          .map(w => `<h1>${nazwaPliku(w.nazwa)}</h1>` + parsujPlik(w.tekst))
+          .join('<hr class="separator">');
+        document.getElementById("tresc").innerHTML = html;
+      });
+  </script>
+</body>
+</html>
+```
+
+Struktura plików przypomnienie:
+```
+daxaver.github.io/
+├── index.html     ← nigdy nie ruszasz
+├── wybor.txt      ← tu wpisujesz nazwy pieśni (bez .txt)
+└── piosenki/
+    ├── przyklad.txt
+    └── ...
