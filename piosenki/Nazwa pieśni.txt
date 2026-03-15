@@ -1,0 +1,20 @@
+[Zwr1]
+tekst pierwszej linijki
+tekst drugiej linijki
+generalnie pierwsza zwrotka
+
+[zwr 2 - można tu napisać 
+cokolwiek, to tylko taki oznacznik]
+tekst pierwszej linijki drugiej zwrotki
+dalszy tekst drugiej zwrotki
+
+[ref]
+i tak dalej 
+i tak dalej 
+i tak dalej 
+i tak dalej 
+
+[Bridge]
+Ważne jest to, 
+Żeby nagłówki
+były w kwadratowych nawiasach
