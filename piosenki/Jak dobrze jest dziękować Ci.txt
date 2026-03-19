@@ -1,7 +1,8 @@
-[Zwr]
+[1]
 Jak dobrze jest dziękować Ci, Panie
 I śpiewać psalm Twojemu imieniu
 I opowiadać rano Twoje miłosierdzie
 A w nocy wierność Twoją 
 Przy dziesięciostrunnej harfie
-I lutni, i dźwięcznej cytrze 
+I lutni
+I dźwięcznej cytrze
