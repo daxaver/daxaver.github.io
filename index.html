@@ -63,8 +63,7 @@
       return html;
     }
 
-    
-    fetch("wybor.txt")
+    fetch("wybor.txt?v=" + Date.now())
       .then(r => r.text())
       .then(lista => {
         const pliki = lista.split("\n").map(l => l.trim()).filter(l => l);
