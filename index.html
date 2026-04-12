@@ -8,7 +8,7 @@
   <style>
     body {
       background-color: #0f0f0f;
-      background-image: url("Xaver_logo.svg");
+      background-image: url("grafika.svg");
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: center center;
@@ -44,15 +44,6 @@
   <div id="tresc">Ładowanie...</div>
 
   <script>
-    function fetchPlik(nazwa) {
-      const rozszerzenia = ["", ".txt", ".json"];
-      const proby = rozszerzenia.map(r => "piosenki/" + nazwa + r);
-      return proby.reduce(
-        (acc, sciezka) => acc.catch(() => fetch(sciezka).then(r => r.ok ? r.text() : Promise.reject())),
-        Promise.reject()
-      );
-    }
-
     function parsujPlik(tekst) {
       const linie = tekst.split("\n");
       let html = "";
@@ -73,7 +64,7 @@
       .then(lista => {
         const pliki = lista.split("\n").map(l => l.trim()).filter(l => l);
         return Promise.all(pliki.map(nazwa =>
-          fetchPlik(nazwa).then(tekst => ({ nazwa, tekst }))
+          fetch("piosenki/" + nazwa + ".txt").then(r => r.text()).then(tekst => ({ nazwa, tekst }))
         ));
       })
       .then(wyniki => {
