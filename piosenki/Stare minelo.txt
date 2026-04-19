@@ -7,39 +7,39 @@ Zupełny akcji zwrot
 Idę za Tobą i nie
 Cofnę się o krok
 
-[]
+[1]
 Stare minęło
 To więcej niż pewne
 Jakie to szczęście
 Być nowym stworzeniem
-[]
+[1]
 To już nie ja
 To już nie ja
 Nie nie ja
 Ty żyjesz we mnie
 
-[]
+[1]
 Ty pokazałeś czym jest miłość
 I przebaczyłeś to co było
-[]
+[1]
 Dałeś mi czyste serce
 Dzieckiem nazwałeś mnie
 To dzięki Tobie lęku
 Już nie boję się
 
-[]
+[1]
 Stare minęło
 To więcej niż pewne
 Jakie to szczęście
 Być nowym stworzeniem
-[]
+[1]
 To już nie ja
 to już nie ja
 nie nie ja
-[]
+[1]
 Ty żyjesz we mnie
 
-[]
+[1]
 Taki dobry sprawiedliwy
 Ty żyjesz we mnie
 Zawsze wierny tak cierpliwy
@@ -49,14 +49,14 @@ Ty żyjesz we mnie
 Kochający tak wspaniały
 Ty żyjesz we mnie
 
-[]
+[1]
 Stare minęło
 To więcej niż pewne
 Jakie to szczęście
 Być nowym stworzeniem
-[]
+[1]
 To już nie ja
 To już nie ja
 Nie nie ja /x3
-[]
+[1]
 Ty żyjesz we mnie
